@@ -3,9 +3,9 @@
     <header>
       <div class="wrap">
         <router-link to="/" @click.native="refresh('home')" class="logo">
-          <img src="../../../public/assets/img/logo.png" alt="Flox" width="108" height="32">
+          <img src="../../../public/assets/img/logo.png" alt="Peliculas" width="108" height="32">
         </router-link>
-        
+
         <i @click="toggleMobileNavigation()" class="icon-hamburger"></i>
 
         <ul class="site-nav site-nav-first">
@@ -18,6 +18,9 @@
           </li>
           <li>
             <router-link to="/upcoming" @click.native="refresh('upcoming')">{{ lang('upcoming') }}</router-link>
+          </li>
+           <li>
+            <router-link to="/genre/Acción" @click.native="refresh('genre')">{{ lang('genre') }}</router-link>
           </li>
         </ul>
 
@@ -88,11 +91,11 @@
       toggleMobileNavigation() {
         this.mobileNavigationOpen = !this.mobileNavigationOpen;
       },
-      
+
       refresh(route) {
         this.mobileNavigationOpen = false;
         let name = this.$route.name;
-        
+
         // Reload only if the page is the same.
         if (this.latestRoute === route) {
           this.loadItems({name});

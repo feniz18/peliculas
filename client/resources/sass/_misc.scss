@@ -1,5 +1,5 @@
-$main1: #895bff;
-$main2: #f1309a;
+$main1: #33A8FF;
+$main2: #86C2E5;
 $dark: #484848;
 $lightGray: #838383;
 $rating1: #6bb01a;
@@ -48,7 +48,7 @@ $gradient: linear-gradient(to right, $main1, $main2);
   background: url(../../../public/assets/img/logo-small.png);
   width: 32px;
   height: 25px;
-  
+
   @include transition(opacity);
 
   animation: blink 1s infinite;
